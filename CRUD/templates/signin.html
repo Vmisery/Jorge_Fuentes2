@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}<title> Iniciar Sesion</title> {% endblock %}
+{% block content %}
+{% block style %} <link rel="stylesheet" type="text/css" href="{% static 'css/signin.css' %}"> {% endblock %}
+<div class="login-container">
+    <h2>Iniciar Sesión</h2>
+    <br>
+    {% if error %}
+    <p class="error-message">{{ error }}</p>
+    {% endif %}
+    <form method="POST" class="login-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn-login" type="submit">Iniciar Sesión</button>
+    </form>
+</div>
+{% endblock %}

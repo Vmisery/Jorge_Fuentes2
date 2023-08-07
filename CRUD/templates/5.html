@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block icon %}<link href="{% static 'imagenes/OIP.png'%}" rel="icon" type="image/png"> {% endblock %}
+{% block style %} <link href="{% static 'css/estilopag5.css'%}" rel="stylesheet" type="text/css"> {% endblock %}
+{% block title %} <title> Mapa </title> {% endblock %}
+</head>
+<body>
+    {% block content %} 
+    <div id="map"></div> 
+    <h1 style="font-family: Arial, sans-serif; color: #333; text-align: center; padding: 20px; background-color: #f5f5f5;">Puedes encontrar nuestra tienda ubicada aquí</h1>
+    <p style="font-family: Arial, sans-serif; font-size: 18px; color: #666; text-align: center;">¡Éxito en tus próximas compras de arte underground!</p>
+    {% endblock %}
+    {% block script %} <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCKiIqCdZGrVxx06LSbe7uG3zXOq1Cz5k&callback=initMap" async defer></script>
+    <script defer async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=initMap"></script>
+    <script src="{% static 'js/5.js' %}"></script>
+    {% endblock %}
+</body>
+</html>

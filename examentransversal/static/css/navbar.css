@@ -1,0 +1,165 @@
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: rgba(207, 8, 8, 0.966);
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-link2{
+    color: white;
+    text-decoration: none;
+}
+
+.logo img{
+    border: 3px solid black;
+    border-radius: 50% / 75% 50%;
+    width: 150px;
+    height: 80px;
+}
+
+.nav-menu{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.nav-menu-item {
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.mensajebienvenida {
+    color: white;
+    text-align: right;
+    font-size: 10px;
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.nav-menu-link {
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+
+.nav-menu-link:hover{
+    background-color: red;
+    transition: 0.5s;
+}
+
+.nav-toggle {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    
+    .header {
+        background-color: rgba(207, 8, 8, 0.966);
+        height: 80px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 2;
+        left: 0;
+    }
+    
+    .logo {
+        z-index: 9999;  
+    }
+    
+    .logo img{
+        border: 3px solid black;
+        border-radius: 50% / 75% 50%;
+        width: 150px;
+        height: 80px;
+    }
+    
+    .nav-menu{
+        flex-direction: column;
+        margin: 0px;
+        align-items: center;
+        background-color: rgba(137, 8, 8, 0.858);
+        position: fixed;
+        left: 0;
+        top: 80px;
+        width: 100%;
+        padding: 20px 0;
+        height: calc(100% - 80px);
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.3s;
+    }
+    
+    .nav-menu-item {
+        line-height: 70px;
+        z-index: 9999;
+    }
+    
+    .nav-menu-link:hover,
+    .nav-menu-link_active:hover   {
+        background: none;
+        color: red;
+    }
+
+    .nav-toggle{    
+        z-index: 9999;
+        display: block;
+    }
+
+    .nav-menu_visible{
+        position: fixed;
+        left: 0;
+        z-index: 9999;
+    }
+    
+    .nav-toggle:focus:not(:focus-visible){
+        outline: none;
+    }
+}
+
+#cart-icon{
+	width:25px;
+	display: inline-block;
+	margin-left: 15px;
+    margin-top: 26px;
+}
+
+#cart-total{
+	display: block;
+	text-align: center;
+	color:#fff;
+	background-color: red;
+	width: 20px;
+	height: 25px;
+	border-radius: 50%;
+    margin-top: -40px;
+    z-index: 10;
+    position: relative;
+}

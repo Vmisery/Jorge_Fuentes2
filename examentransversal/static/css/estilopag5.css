@@ -1,0 +1,266 @@
+/* Estilos globales */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    padding-top: 80px;
+    background: #E5E5E5;
+}
+
+/* Estilo del menú opciones  */
+
+.header {
+    background-color: rgba(207, 8, 8, 0.966);
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-link2{
+    color: white;
+    text-decoration: none;
+}
+
+.logo img{
+    border: 3px solid black;
+    border-radius: 50% / 75% 50%;
+    width: 150px;
+    height: 80px;
+}
+
+.nav-menu{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.nav-menu-item {
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.nav-menu-link {
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.nav-menu-link:hover{
+    background-color: red;
+    transition: 0.5s;
+}
+
+.nav-toggle {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    cursor: pointer;
+    display: none;
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+    z-index: 0;
+  }
+
+
+/* Estilo del Footer  */
+
+.pie-pagina{
+    width: 100%;
+    background-color: #282525;
+}
+
+.pie-pagina .g1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.pie-pagina .g1 .box figure{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.pie-pagina .g1 .box figure img{
+    margin-left: 20px;
+    width: 190px;
+    border: 3px solid black;
+    border-radius: 50% / 75% 50%;
+}
+
+.pie-pagina .g1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+    text-align: justify;
+    max-width: 100%;
+    font-size: 10px;
+}
+
+.pie-pagina .g1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .g1 .redes-sociales a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-left: 10px;
+    background-color: #453b3b;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.pie-pagina .g1 .redes-sociales a:hover{
+    background-color:rgb(255, 255, 255);
+}
+
+.fa-instagram {
+    color: #ff00ae;
+}
+
+.fa-twitter {
+    color: #1fb4ff;
+}
+
+.fa-facebook{
+    color: #0222c0;
+}
+
+.fa-youtube {
+    color: #ff0000;
+}
+.pie-pagina .g2{
+    background-color: #6d4e4e;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    color: #fff;
+
+}
+
+.footer-container{
+    width: 100%;
+    padding-top: 25px;
+    background-color: #333;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Diseño Responsive*/
+
+@media screen and (max-width:768px) {
+    
+    .header {
+        background-color: rgba(207, 8, 8, 0.966);
+        height: 80px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+    }
+    
+    .logo img{
+        border: 3px solid black;
+        border-radius: 50% / 75% 50%;
+        width: 150px;
+        height: 80px;
+    }
+    
+    .nav-menu{
+        flex-direction: column;
+        margin: 0px;
+        align-items: center;
+        background-color: rgba(137, 8, 8, 0.858);
+        position: fixed;
+        left: 0;
+        top: 80px;
+        width: 100%;
+        padding: 20px 0;
+        height: calc(100% - 80px);
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.3s;
+    }
+    
+    .nav-menu-item {
+        line-height: 70px;
+    }
+    
+    .nav-menu-link:hover,
+    .nav-menu-link_active:hover   {
+        background: none;
+        color: red;
+    }
+
+    .nav-toggle{
+        display: block;
+    }
+
+    .nav-menu_visible{
+        left: 0;
+    }
+    
+    .nav-toggle:focus:not(:focus-visible){
+        outline: none;
+    }
+
+    #map {
+        width: 100%;
+        height: 500px;
+        z-index: 0;
+      }
+
+    .pie-pagina .g1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+    
+    .pie-pagina .g1 .box figure img{
+        width: 40%;
+        height: 100%;
+        margin-left: 35%;
+        border: 3px solid black;
+        border-radius: 50% / 75% 50%;
+    }
+    
+    .pie-pagina .g1 .box h2 {
+        text-align: center;
+    }
+
+    .pie-pagina .g1 .redes-sociales {
+        text-align: center;
+    }
+}

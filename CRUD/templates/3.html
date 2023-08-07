@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% block icon %}<link href="{% static 'imagenes/galeriaicono.png'%}" rel="icon" type="image/png"> {% endblock %}
+{% block style %} <link href="{% static 'css/estilopag3.css' %} " rel="stylesheet" type="text/css"> 
+                  <link href="{% static 'css/main.css' %} " rel="stylesheet" type="text/css">{% endblock %}
+{% block title %} <title> Galeria </title> {% endblock %}
+</head> 
+<body>
+    {% block content %} 
+
+    <div class="row">
+        {% for obra in obras %}
+        <div class="col-lg-4">
+            <img class="thumbnail" src="{{obra.imagen.url}}">
+            <div class="box-element product">
+                <h6><strong>{{ obra.nombre }}</strong></h6>
+                <br>
+                <button class="btn btn-outline-secondary add-btn">Añadir</button>
+                <a class="btn btn-outline-success" href="{% url 'galeria' obra.id  %}/">Ver</a>
+                <h4 style="float: right"><strong>${{ obra.precio }}</strong></h4>
+            </div>
+        </div>
+        {% endfor %}
+    {% endblock %}
+    <br>
+</body>
+</html>

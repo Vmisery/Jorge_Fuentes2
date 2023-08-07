@@ -1,0 +1,104 @@
+/* Estilos globales */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    padding-top: 80px;
+    background: #E5E5E5;
+}
+
+/* Diseño Responsive*/
+
+@media screen and (max-width:768px) {
+    
+    .header {
+        background-color: rgba(207, 8, 8, 0.966);
+        height: 80px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 2;
+        left: 0;
+    }
+    
+    .logo {
+        z-index: 9999;  
+    }
+    
+    .logo img{
+        border: 3px solid black;
+        border-radius: 50% / 75% 50%;
+        width: 150px;
+        height: 80px;
+    }
+    
+    .nav-menu{
+        flex-direction: column;
+        margin: 0px;
+        align-items: center;
+        background-color: rgba(137, 8, 8, 0.858);
+        position: fixed;
+        left: 0;
+        top: 80px;
+        width: 100%;
+        padding: 20px 0;
+        height: calc(100% - 80px);
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.3s;
+    }
+    
+    .nav-menu-item {
+        line-height: 70px;
+        z-index: 9999;
+    }
+    
+    .nav-menu-link:hover,
+    .nav-menu-link_active:hover   {
+        background: none;
+        color: red;
+    }
+
+    .nav-toggle{    
+        z-index: 9999;
+        display: block;
+    }
+
+    .nav-menu_visible{
+        position: fixed;
+        left: 0;
+        z-index: 9999;
+    }
+    
+    .nav-toggle:focus:not(:focus-visible){
+        outline: none;
+    }
+
+    .pie-pagina .g1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+
+    
+    .pie-pagina .g1 .box figure img{
+        width: 40%;
+        height: 100%;
+        margin-left: 35%;
+        border: 3px solid black;
+        border-radius: 50% / 75% 50%;
+    }
+    
+    .pie-pagina .g1 .box h2 {
+        text-align: center;
+    }
+
+    .pie-pagina .g1 .redes-sociales {
+        text-align: center;
+    }
+}

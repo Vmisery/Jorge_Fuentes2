@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block icon %} <link href="{% static 'imagenes/iconopag2.png' %}" rel="icon" type="image/png"> {% endblock %}
+{% block style %}<link href="{% static 'css/estilopag2.css' %} " rel="stylesheet" type="text/css"> {% endblock %}
+{% block title %} <title> Nuestra Mision </title> {% endblock %}
+</head>
+<body>
+    {% block content %} 
+    <div class="content-container">
+        <div class="mision"></div>
+        <h1>Misión</h1>
+        <p>En Grupo Cero, nuestra misión es promover y apoyar el desarrollo artístico de nuestros miembros y de la comunidad en general a través de la creación, exhibición y venta de obras de arte de alta calidad. Nos esforzamos por mantener un ambiente de cooperación y colaboración entre nuestros miembros, y por ofrecer un espacio para la educación y la creación artística.</p>
+        <div class="vision"></div>
+        <h1>Visión</h1>
+        <p>Nuestra visión es ser reconocidos como una cooperativa líder en la creación y promoción del arte contemporáneo, tanto a nivel local como internacional. Nos esforzamos por fomentar un ambiente de creatividad, innovación y excelencia artística en nuestra comunidad.</p>
+        <div class="objetivos"></div>
+        <h1>Objetivos</h1>
+        <p>Fomentar el crecimiento artístico de nuestros miembros, ofreciendo talleres y recursos para el desarrollo de nuevas técnicas y estilos artísticos.
+            Ofrecer una sala de exhibición y venta de obras de arte de alta calidad, promoviendo y apoyando la venta de obras de nuestros miembros y artistas invitados.
+            Proporcionar un espacio de encuentro y colaboración para artistas y miembros de la comunidad interesados en el arte.
+            Promover la educación y la cultura en nuestra comunidad a través de la organización de eventos y actividades relacionadas con el arte.
+            Fomentar la cooperación y colaboración entre nuestros miembros, ofreciendo un ambiente de trabajo y aprendizaje en equipo.</p>
+        <div class="Informacion-adicional"></div>
+        <h1>Información Adicional</h1>
+        <p>Valoramos la diversidad de expresiones artísticas y apoyamos la inclusión y la equidad en nuestra comunidad.
+            Nos esforzamos por ser un espacio seguro y acogedor para artistas y miembros de la comunidad que buscan participar en nuestras actividades y eventos.
+            Nos comprometemos a respetar los derechos de propiedad intelectual de nuestros miembros y de los artistas invitados, promoviendo la ética y la legalidad en la creación y venta de obras de arte.
+            Promovemos la sostenibilidad y el cuidado del medio ambiente, fomentando la utilización de materiales y prácticas eco-amigables en la creación de obras de arte.</p>
+        </div>    
+        {% endblock %}
+
+</body>
+</html>

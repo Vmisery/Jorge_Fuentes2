@@ -1,0 +1,93 @@
+/* Estilo del Footer  */
+
+.pie-pagina{
+    width: 100%;
+    background-color: #282525;
+}
+.pie-pagina .g1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.pie-pagina .g1 .box figure{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.pie-pagina .g1 .box figure img{
+    margin-left: 20px;
+    width: 190px;
+    border: 3px solid black;
+    border-radius: 50% / 75% 50%;
+}
+
+.pie-pagina .g1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+    text-align: justify;
+    max-width: 100%;
+    font-size: 10px;
+}
+
+.pie-pagina .g1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .g1 .redes-sociales a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-left: 10px;
+    background-color: #453b3b;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.pie-pagina .g1 .redes-sociales a:hover{
+    background-color:rgb(255, 255, 255);
+}
+
+.fa-instagram {
+    color: #ff00ae;
+}
+
+.fa-twitter {
+    color: #1fb4ff;
+}
+
+.fa-facebook{
+    color: #0222c0;
+}
+
+.fa-youtube {
+    color: #ff0000;
+}
+.pie-pagina .g2{
+    background-color: #6d4e4e;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    color: #fff;
+
+}
+
+.footer-container{
+    width: 100%;
+    padding-top: 25px;
+    background-color: #333;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+}

@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %} <link href="{% static 'css/main.css' %} " rel="stylesheet" type="text/css"> {% endblock %}
+{% block content %}
+
+<h3>Tu Carrito de compras</h3>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="box-element">
+            <a class="btn btn-outline-dark" href="/galeria/">&#x2190; Volver</a>
+        </div>
+        <br>
+        <br>
+        <table class="table">
+            <tr>
+                <th><h5>Articulos: <strong>{{ cart.get_cart_items }}</strong></h5></th>
+                <th><h5>Total: <strong>${{ cart.get_cart_total}}.-</strong></h5></th>
+                <th>
+                    <a style="float: right; margin:5px;" class="btn btn-success" href="{% url 'checkout' %}">Pagar</a>
+                </th>
+            </tr>
+        </table>
+        <div class="box-element">
+            <div class="cart-row">
+                <div style="flex:2"></div>
+                <div style="flex:2"><Strong>Articulo</Strong></div>
+                <div style="flex:1"><Strong>Precio</Strong></div>
+                <div style="flex:1"><Strong>Cantidad</Strong></div>
+                <div style="flex:1"><Strong>Total</Strong></div>
+            </div>
+            {% for producto in cart_items %}
+				<div class="cart-row">
+
+					<div style="flex:2">
+                        <img class="row-image" src="{{producto.producto.imagen.url}}">
+                    </div>
+
+                    {% for nombreobra in obras %}
+                        {% if producto.producto_id == nombreobra.id %}
+					        <div style="flex:2"><p>{{nombreobra.nombre}}</p></div>
+                        {% endif %}
+                    {% endfor %}
+					<div style="flex:1"><p>${{producto.producto.precio}}</p></div>
+					<div style="flex:1">
+						<p class="quantity">{{producto.quantity}}</p>
+						<div class="quantity">
+							<img data-product="{{producto.product.id}}" data-action="add" class="chg-quantity update-cart" src="{% static  'imagenes/flechaarriba.png' %}">
+					
+							<img data-product="{{producto.product.id}}" data-action="remove" class="chg-quantity update-cart" src="{% static  'imagenes/flechaabajo.png' %}">
+						</div>
+					</div>
+					<div style="flex:1"><p>${{producto.get_total}}</p></div>
+				</div>
+               
+				{% endfor %}
+            </div>
+
+        </div>
+        <br>
+    </div>
+</div>
+{% endblock %}

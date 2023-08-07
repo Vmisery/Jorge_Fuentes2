@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% if user.is_authenticated %}
+<a href="{% url 'gestionobras' %}">
+    <button id="btn-floating" class="btn btn-primary btn-floating btn-lg">+</button>
+</a>
+{% endif %}
+
+<div class="carousel-container">
+    <div class="carrusel">
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="{% url 'galeria3' %}">
+                    <img src="{% static 'imagenes/esculturas/caballosdeajedrez.jpg' %}">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="{% url 'galeria7' %}">
+                <img src="{% static 'imagenes/OIP.jpg' %}">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="{% url 'galeria5' %}">
+                <img src="{% static 'imagenes/esculturas/tsunamusic.jpg' %}" class="d-block w-10" alt="...">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="{% url 'galeria4' %}">
+                <img src="{% static 'imagenes/esculturas/s_001_re-768x384.jpg' %}">
+                </a>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+            </div>
+        </div>
+        </div>
+</div>
+    <div class="parrafo1">
+        <p>Como miembros de la cooperativa "Grupo Cero", hemos logrado crear un espacio de trabajo y exhibición para mostrar nuestras creaciones
+            al público. Como artistas plásticos, dedicados a la pintura, escultura, orfebrería, tejido y otras formas de expresión artística, 
+            hemos encontrado en la cooperación y el trabajo en equipo, una manera de compartir nuestras habilidades y talentos con el mundo. 
+            Además, gracias a nuestro pequeño café, hemos creado un lugar donde no solo se pueden apreciar nuestras obras, sino también disfrutar
+            de un espacio de reunión para atender a nuestros clientes que buscan trabajos personalizados o desean adquirir alguna de nuestras piezas.
+            Como miembros de "Grupo Cero", estamos orgullosos de cómo la colaboración y la unión pueden llevar a logros excepcionales y seguir 
+            impulsando nuestra pasión por el arte. </p>
+    </div>
+    <div class="parrafo2">
+        <p>La creatividad y pasión de los artistas de la cooperativa "Grupo Cero" se refleja en cada obra que crean. Cada uno de ellos tiene un
+             estilo único y personal, que se ve reflejado en la variedad de técnicas y materiales que utilizan en sus obras de arte. Algunos se
+              enfocan en la pintura al óleo, mientras que otros prefieren la escultura en piedra o el tejido de textiles. Pero, a pesar de sus 
+              diferencias, todos comparten la misma visión de crear arte que inspire y emocione al espectador. Cada uno de ellos tiene una historia
+               que contar, y en cada obra se puede percibir su experiencia y su visión del mundo. Es un verdadero honor formar parte de esta cooperativa
+               , donde la colaboración y el apoyo mutuo son valores fundamentales para alcanzar el éxito. </p>
+    </div>
+{% endblock %}
